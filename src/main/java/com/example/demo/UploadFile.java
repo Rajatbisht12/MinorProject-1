@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,7 +21,7 @@ public class UploadFile {
     private static final Logger logger = LoggerFactory.getLogger(UploadFile.class);
     private static final String BASE_UPLOAD_DIR = "/home/rajat-bisht11/Downloads/demo/src/main/resourcesMyFolder/"; // Base directory for uploads
 
-    @PostMapping("/upload")
+    @PutMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file, @RequestParam("folder") String folder) {
         if (file.isEmpty()) {
             return ResponseEntity.badRequest().body("Please select a file to upload");
