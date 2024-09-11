@@ -1,11 +1,14 @@
 package com.example.demo;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.MediaType;
 
 import java.nio.file.Files;
+import java.io.File;
 import java.io.IOException;
 
 @RestController
@@ -17,4 +20,5 @@ public class Controller {
         byte[] fileBytes = Files.readAllBytes(htmlFile.getFile().toPath());
         return new String(fileBytes);
     }
+
 }
