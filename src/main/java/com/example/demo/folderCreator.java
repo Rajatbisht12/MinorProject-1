@@ -35,7 +35,7 @@ public class folderCreator {
                 return ResponseEntity.ok("Folder already exists: " + folderName);
             }
 
-            if(f.mkdirs()){
+            if(f.mkdir()){
                 logger.info("Folder created successfully: {}", folderName);
                 return ResponseEntity.ok("Folder created: " + folderName);
             }else {
