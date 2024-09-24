@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Readfile {
 
     public static final Logger logger = LoggerFactory.getLogger(Readfile.class);
-    private static final String BASE_PATH = "/Users/eshansingh/MinorProject-1/src/main/resourcesMyFolder";
+    private static final String BASE_PATH = "/home/rajat-bisht11/Desktop/demo/src/main/resourcesMyFolder";
 
     @PostMapping(value="/readF", produces = "text/plain")
     public ResponseEntity<String> readFile(@RequestBody InputData inputData) {

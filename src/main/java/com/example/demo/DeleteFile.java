@@ -17,7 +17,7 @@ import org.slf4j.LoggerFactory;
 @RestController
 public class DeleteFile {
     public static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
-    private static final String BASE_PATH = "/Users/eshansingh/MinorProject-1/src/main/resourcesMyFolder";
+    private static final String BASE_PATH = "/home/rajat-bisht11/Desktop/demo/src/main/resourcesMyFolder";
 
     @PostMapping(value="/deleteF", produces = "text/plain")
     public ResponseEntity<String> deleteFile(@RequestBody InputData inputData) {

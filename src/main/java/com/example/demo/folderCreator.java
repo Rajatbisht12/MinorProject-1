@@ -25,7 +25,7 @@ public class folderCreator {
 
         String folderName = inputName.getMessage().toUpperCase();
         logger.info("Attempting to create file: {}", folderName);
-        String path = "/Users/eshansingh/MinorProject-1/src/main/resourcesMyFolder";
+        String path = "/home/rajat-bisht11/Desktop/demo/src/main/resourcesMyFolder";
         path = path + folderName;
         File f = new File(path);
 
