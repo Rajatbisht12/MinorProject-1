@@ -19,7 +19,7 @@ import org.slf4j.LoggerFactory;
 public class UploadFile {
 
     private static final Logger logger = LoggerFactory.getLogger(UploadFile.class);
-    private static final String BASE_UPLOAD_DIR = "/home/rajat-bisht11/Downloads/demo/src/main/resourcesMyFolder/"; // Base directory for uploads
+    private static final String BASE_UPLOAD_DIR = "/Users/eshansingh/MinorProject-1/src/main/resourcesMyFolder"; // Base directory for uploads
 
     @PutMapping("/upload")
     public ResponseEntity<String> uploadFile(@RequestParam("file") MultipartFile file, @RequestParam("folder") String folder) {
