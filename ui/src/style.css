@@ -1,0 +1,245 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f1f3f4;
+    color: #3c4043;
+  }
+  
+  /* Flex container styles */
+  .flex {
+    display: flex;
+  }
+  
+  .h-screen {
+    height: 100vh;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 256px;
+    background-color: white;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15);
+    padding-top: 8px;
+  }
+  
+  .sidebar-header {
+    padding: 12px 24px;
+  }
+  
+  .sidebar-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: #5f6368;
+  }
+  
+  nav {
+    margin-top: 16px;
+  }
+  
+  nav .link {
+    display: flex;
+    align-items: center;
+    padding: 10px 24px;
+    color: #3c4043;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0 20px 20px 0;
+    margin-right: 16px;
+  }
+  
+  nav .link:hover {
+    background-color: #f1f3f4;
+  }
+  
+  nav .link.active {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .toolbar {
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toolbar-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toolbar-input {
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .toolbar-button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .toolbar-button:hover {
+    background-color: #1765cc;
+  }
+  
+  /* File/Folder Grid */
+  .file-folder-grid {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .item {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    transition: box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .item:hover {
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  }
+  
+  .item-icon {
+    font-size: 36px;
+    color: #5f6368;
+    margin-bottom: 8px;
+  }
+  
+  .item-name {
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: #5f6368;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-top: 8px;
+    font-size: 18px;
+  }
+  
+  .delete-button:hover {
+    color: #d93025;
+  }
+  
+  /* Message display styles */
+  .message {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #323232;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+    font-size: 14px;
+  }
+  
+  /* Additional Google Drive-like styles */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #5f6368;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 8px;
+    color: #5f6368;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #f1f3f4;
+    border-radius: 8px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-input {
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #3c4043;
+    width: 100%;
+    padding: 0 8px;
+  }
+  
+  .search-input:focus {
+    outline: none;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1a73e8;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 64px;
+    }
+  
+    .sidebar-title, nav .link span {
+      display: none;
+    }
+  
+    nav .link {
+      justify-content: center;
+      padding: 16px 0;
+    }
+  
+    .file-folder-grid {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }

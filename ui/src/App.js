@@ -1,12 +1,11 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import FileManagementSystem from './FIleManagementSystem';
 
-function App() {
-  return (
-    <div className="App">
-      <FileManagementSystem />
-    </div>
-  );
-}
+const App = () => (
+  <Routes>
+    <Route path="/" element={<FileManagementSystem />} />
+  </Routes>
+);
 
-export default App;
+export default App; // Make sure this line is present
